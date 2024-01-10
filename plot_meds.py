@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
 from plot_all import create_graph 
 
 meds_c = []
@@ -39,14 +38,13 @@ x = [0, 5, 6, 7, 8, 10]
 y = [5] + multiple_by_100(prob_below_lower_percentile_95)
 fig, ax = plt.subplots()
 
+
 ax.plot(x, y, marker = 'o', linestyle = '-')
 ax.grid()
 ax.set_xlabel('etanol conc.(%)')
 ax.set_ylabel('formation rate(%)')
 fig.savefig('fig_eta_95%.png')
-plt.close(fig)
-plt.clf()
-plt.close()
+
 
 x1 = [5] + multiple_by_100(prob_below_lower_percentile_95)
 y1 = multiple_by_100([0, 0.232142857, 0.432098765, 0.631868132, 1, 1])
